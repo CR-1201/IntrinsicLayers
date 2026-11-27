@@ -1,24 +1,21 @@
 # 主页上传说明
 
-本仓库用于 IntrinsicLayers 论文主页。网页发布专用分支为 homepage：https://github.com/CR-1201/IntrinsicLayers/tree/homepage
-
-当前 index.html 是临时占位页，可以直接替换为正式主页。
+IntrinsicLayers 论文主页直接使用 main 分支，不需要单独的 homepage 分支。
 
 ## 上传网页
 
-1. 接受仓库所有者发送的 GitHub 协作邀请。
-2. 打开仓库，选择 homepage 分支。
-3. 通过 Add file → Upload files 上传正式的 index.html 和图片、CSS、JavaScript 等资源，提交到 homepage。也可以通过 git push 上传。
-4. index.html 必须位于仓库根目录，不要将整个网站放在额外的一层目录中。
-5. 建议资源使用相对路径，例如 ./images/teaser.png、./css/style.css，避免 /images/teaser.png 这类指向域名根目录的路径。
-6. 保留 .nojekyll 文件。只上传可直接运行的静态网页；如果项目需要构建，请上传构建后的文件。
+1. 接受 GitHub 协作邀请后，打开仓库并选择 main 分支。
+2. 通过 Add file → Upload files 上传正式 index.html、图片、CSS 和 JavaScript 等资源，提交到 main；也可以使用 git push。
+3. index.html 放在仓库根目录，替换临时占位页，不要额外套一层文件夹。
+4. 资源使用相对路径，如 ./images/teaser.png 和 ./css/style.css。
+5. 保留 .nojekyll；需要构建的项目请上传构建后的静态文件。
 
-## 发布设置（仓库所有者完成一次即可）
+## GitHub Pages 发布设置
 
-Settings → Pages → Source: Deploy from a branch → Branch: homepage → Folder: / (root) → Save。
+Settings → Pages → Source: Deploy from a branch → Branch: main → Folder: / (root) → Save。
 
-启用并成功部署后，主页地址为：https://cr-1201.github.io/IntrinsicLayers/
+只有在上述 Pages 设置保存成功后，提交到 main 才会按此方式自动发布。可在 Actions 查看部署状态。
 
-之后提交到 homepage 会触发自动更新。可在 Actions 查看部署状态。
+主页地址：https://cr-1201.github.io/IntrinsicLayers/
 
 上传者使用自己的 GitHub 账号，无需服务器 IP 或仓库所有者的密码、Token。
